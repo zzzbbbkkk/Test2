@@ -1,23 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity1"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
+    <!-- 标题 -->
     <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="页面1"
+        android:text="Hello TableLayout"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="50dp" />
 
+    <!-- 分隔线按钮（这里只是为了视觉分隔，可根据实际需求决定是否添加点击逻辑） -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:text=""
+        android:enabled="false"
+        android:clickable="false"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 表格布局 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:stretchColumns="*">
+
+        <!-- Open 行 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/open_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onOpenClick"
+                android:padding="20dp"
+                android:text="Open..."
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="right"
+                android:padding="20dp"
+                android:text="Ctrl-O"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- Save 行 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onSaveClick"
+                android:padding="20dp"
+                android:text="Save..."
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="right"
+                android:padding="20dp"
+                android:text="Ctrl-S"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- Save As 行 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/save_as_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onSaveAsClick"
+                android:padding="20dp"
+                android:text="Save As..."
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="right"
+                android:padding="20dp"
+                android:text="Ctrl-Shift-S"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- 分隔线按钮（这里只是为了视觉分隔，可根据实际需求决定是否添加点击逻辑） -->
+        <TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:layout_span="2"
+                android:background="@android:color/darker_gray"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="" />
+        </TableRow>
+
+        <!-- Import 行 (禁用) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:enabled="false"
+                android:padding="20dp"
+                android:text="Import..."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="right"
+                android:padding="20dp"
+                android:text=""
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- Export 行 (禁用) -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:enabled="false"
+                android:padding="20dp"
+                android:text="Export..."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="right"
+                android:padding="20dp"
+                android:text="Ctrl-E"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <!-- 分隔线按钮（这里只是为了视觉分隔，可根据实际需求决定是否添加点击逻辑） -->
+        <TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:layout_span="2"
+                android:background="@android:color/darker_gray"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="" />
+        </TableRow>
+
+        <!-- Quit 行 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:gravity="center"
+                android:onClick="onQuitClick"
+                android:padding="20dp"
+                android:text="Quit"
+                android:textSize="18sp" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

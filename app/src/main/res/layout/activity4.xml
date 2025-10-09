@@ -1,6 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity4">
+
+    <!-- 顶部标签栏：Space Stations、Flights、Rovers -->
+
+    <TextView
+        android:id="@+id/tab_stations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Space Stations"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- 辅助 guideline，用于标签栏和内容区的分隔 -->
+
+    <TextView
+        android:id="@+id/tab_flights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Flights"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintEnd_toStartOf="@id/tab_rovers"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/tab_stations"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tab_rovers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Rovers"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+
+    <TextView
+        android:id="@+id/dca"
+        android:layout_width="124dp"
+        android:layout_height="131dp"
+        android:background="#008000"
+        android:padding="16dp"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <ImageView
+        android:id="@+id/galaxy"
+        android:layout_width="131dp"
+        android:layout_height="130dp"
+        android:src="@drawable/galaxy"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <ImageView
+        android:id="@+id/rocket_icon"
+        android:layout_width="37dp"
+        android:layout_height="88dp"
+        android:src="@drawable/rocket_icon"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="453dp" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="71dp"
+        android:layout_height="91dp"
+        android:src="@drawable/space_station_icon"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+
+    <TextView
+        android:id="@+id/mars"
+        android:layout_width="127dp"
+        android:layout_height="129dp"
+        android:background="#008000"
+        android:padding="16dp"
+        android:text="MARS"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <TextView
+        android:id="@+id/one_way"
+        android:layout_width="138dp"
+        android:layout_height="57dp"
+        android:background="#D2691E"
+        android:padding="8dp"
+        android:text="One Way"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <TextView
+        android:id="@+id/traveller"
+        android:layout_width="119dp"
+        android:layout_height="50dp"
+        android:background="#D2691E"
+        android:padding="8dp"
+        android:text="1 Traveller"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <ImageView
+        android:id="@+id/rocket"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/rocket_icon"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ImageView
+        android:id="@+id/double_arrows"
+        android:layout_width="109dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintEnd_toStartOf="@+id/mars"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <ImageView
+        android:id="@+id/planet"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        android:src="@drawable/rover_icon"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/depart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#008000"
+        android:text="DEPART"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

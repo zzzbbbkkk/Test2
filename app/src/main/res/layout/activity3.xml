@@ -2,22 +2,226 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- 输入标签 -->
     <TextView
-        android:id="@+id/titleText"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="页面1"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Input"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginTop="20dp" />
 
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#D4E1C8"
+        android:gravity="right|center_vertical"
+        android:paddingRight="10dp"
+        android:text="0.0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintMarginStart="20dp"
+    app:layout_constraintMarginEnd="20dp"
+    app:layout_constraintMarginTop="10dp"
+        tools:ignore="UnknownId" />
+
+
+    <!-- 第一行按钮：7、8、9、+ -->
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_display"
+        app:layout_constraintEnd_toStartOf="@id/btn_8"
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/tv_display"
+        app:layout_constraintEnd_toStartOf="@id/btn_9"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="9"
+        app:layout_constraintStart_toEndOf="@id/btn_8"
+        app:layout_constraintTop_toBottomOf="@id/tv_display"
+        app:layout_constraintEnd_toStartOf="@id/btn_add"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@id/btn_9"
+        app:layout_constraintTop_toBottomOf="@id/tv_display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintMarginEnd="20dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- 第二行按钮：4、5、6、× -->
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_7"
+        app:layout_constraintEnd_toStartOf="@id/btn_5"
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@id/btn_4"
+        app:layout_constraintTop_toBottomOf="@id/btn_8"
+        app:layout_constraintEnd_toStartOf="@id/btn_6"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@id/btn_5"
+        app:layout_constraintTop_toBottomOf="@id/btn_9"
+        app:layout_constraintEnd_toStartOf="@id/btn_multiply"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="×"
+        app:layout_constraintStart_toEndOf="@id/btn_6"
+        app:layout_constraintTop_toBottomOf="@id/btn_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintMarginEnd="20dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- 第三行按钮：1、2、3、- -->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_4"
+        app:layout_constraintEnd_toStartOf="@id/btn_2"
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@id/btn_1"
+        app:layout_constraintTop_toBottomOf="@id/btn_5"
+        app:layout_constraintEnd_toStartOf="@id/btn_3"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@id/btn_2"
+        app:layout_constraintTop_toBottomOf="@id/btn_6"
+        app:layout_constraintEnd_toStartOf="@id/btn_subtract"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_subtract"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="/"
+        app:layout_constraintStart_toEndOf="@id/btn_3"
+        app:layout_constraintTop_toBottomOf="@id/btn_multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintMarginEnd="20dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- 第四行按钮：.、0、=、空（这里可以根据实际需求调整，图中最后一个按钮不太清晰，暂留空） -->
+    <Button
+        android:id="@+id/btn_point"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_1"
+        app:layout_constraintEnd_toStartOf="@id/btn_0"
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@id/btn_point"
+        app:layout_constraintTop_toBottomOf="@id/btn_2"
+        app:layout_constraintEnd_toStartOf="@id/btn_equal"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_equal"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="="
+        app:layout_constraintStart_toEndOf="@id/btn_0"
+        app:layout_constraintTop_toBottomOf="@id/btn_3"
+        app:layout_constraintEnd_toStartOf="@id/btn_empty"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_empty"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@id/btn_equal"
+        app:layout_constraintTop_toBottomOf="@id/btn_subtract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintMarginEnd="20dp"
+        app:layout_constraintWidth_percent="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

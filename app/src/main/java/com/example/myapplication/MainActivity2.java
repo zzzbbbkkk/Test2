@@ -5,13 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class Activity1 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +23,7 @@ public class Activity1 extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity1.class);
+                Intent intent = new Intent(MainActivity2.this, Activity1.class);
                 startActivity(intent);
             }
         });
@@ -36,7 +32,7 @@ public class Activity1 extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity2.class);
+                Intent intent = new Intent(MainActivity2.this, Activity2.class);
                 startActivity(intent);
             }
         });
@@ -45,7 +41,7 @@ public class Activity1 extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity3.class);
+                Intent intent = new Intent(MainActivity2.this, Activity3.class);
                 startActivity(intent);
             }
         });
