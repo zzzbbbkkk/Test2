@@ -187,9 +187,28 @@ public class Activity3 extends AppCompatActivity {
 ### 4.1 各页面运行效果
 
 1. **Activity1**：展示了一个 4x4 的按钮网格，使用 TableLayout 实现，按钮均匀分布在整个屏幕宽度上。
+
+   截图展示：
+
+   ![Snipaste_2025-10-21_15-03-01](README.assets/Snipaste_2025-10-21_15-03-01.png)
+
 2. **Activity2**：通过 Java 代码动态创建了一个类似菜单的界面，包含可点击项和分隔线，点击菜单项会显示 Toast 提示，实现了良好的交互效果。
+
+   截图展示：
+
+   ![Snipaste_2025-10-21_15-03-13](README.assets/Snipaste_2025-10-21_15-03-13.png)
+
 3. **Activity3**：实现了一个标准的计算器布局，按钮排列整齐，数字区和运算符区分明确，为后续实现计算功能奠定了基础。
+
+   截图展示：
+
+   ![Snipaste_2025-10-21_15-03-18](README.assets/Snipaste_2025-10-21_15-03-18.png)
+
 4. **Activity4**：创建了一个太空主题的界面，包含顶部标签栏、中间内容区和底部操作按钮，使用 ConstraintLayout 精确控制了各元素的位置关系。
+
+5. 截图展示：
+
+   ![Snipaste_2025-10-21_15-03-23](README.assets/Snipaste_2025-10-21_15-03-23.png)
 
 ### 4.2 布局对比分析
 

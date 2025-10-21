@@ -30,10 +30,11 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintMarginStart="20dp"
-    app:layout_constraintMarginEnd="20dp"
-    app:layout_constraintMarginTop="10dp"
-        tools:ignore="UnknownId" />
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginEnd="20dp"
+        app:layout_constraintMarginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="UnknownId" />
 
 
     <!-- 第一行按钮：7、8、9、+ -->
