@@ -1,5 +1,9 @@
 # Android 布局与多页面应用实验报告
 
+姓名：张博凯 
+班级：软工2班 
+学号：121052023047
+
 ## 一、实验目的
 
 1. 掌握 Android 中多种布局管理器的使用（LinearLayout、TableLayout、ConstraintLayout）
